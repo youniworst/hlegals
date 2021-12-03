@@ -1,0 +1,871 @@
+@mixin gradientText {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 50px;
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.main-wrapper {
+    width: 100%;
+    font-family: 'TT Norms', sans-serif;
+}
+
+.wrapper {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header .wrapper {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header_mobile_actions {
+    max-width: 358px;
+    width: 100%;
+}
+
+.header_logo {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+}
+
+.header_logo::before,
+.header_logo::after {
+    content: "";
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    top: 0;
+}
+
+.header_logo::before {
+    background-image: url(../../general_images/logo_slash.svg);
+    left: 44.7%;
+    width: 21px;
+    height: 47px;
+}
+
+.header_logo::after {
+    background-image: url(../../general_images/logo_symbol.svg);
+    right: 0;
+    width: 41px;
+    height: 47px;
+}
+
+.logo_link {
+    margin-right: 26px;
+}
+
+.logo_img {
+    width: 155px;
+    height: 62px;
+}
+
+.crumb_text {
+    font-size: 38px;
+    line-height: 45px;
+    text-decoration: none;
+    color: #323264;
+}
+
+
+.burger_menu {
+    display: none;
+}
+
+.mobile_nav {
+    display: none;
+    position: relative;
+}
+
+.mobile_nav_close {
+    background-image: url(../../general_images/red_cross.svg);
+    position: absolute;
+    display: block;
+    top: 19px;
+    right: 19px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.mobile_nav_logo_link {
+    margin-bottom: 26px;
+}
+
+.mobile_nav_logo {
+    width: 32px;
+    height: 32px;
+}
+
+.mobile_nav_list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mobile_nav_list_item {
+    min-height: 54px;
+    display: flex;
+    align-items: center;
+}
+
+.mobile_nav_list_item_link {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    color: #24A3FF;
+    text-decoration: none;
+}
+
+.mobile_nav_list_item_link_active {
+    color: #F0145A;
+}
+
+.header_content {
+    max-width: 564px;
+    width: 100%;
+}
+
+.header_contacts {
+    max-width: 564px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    color: #B3B3BA;
+}
+
+.langswitch {
+    max-width: 90px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.lang_item {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 5px 6px;
+}
+
+.lang_item:hover {
+   background-color: #EDEDF7;
+}
+
+
+.active_lang,
+.active_lang:hover {
+    background: #F0145A;
+    color: white;
+}
+
+.address_street {
+    max-width: 208px;
+    width: 100%;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: normal;
+}
+
+.address_number {
+    max-width: 147px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    position: relative;
+}
+
+.address_number::before,
+.address_number::after {
+    content: "";
+    background: #E6E6F0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.address_number::before {
+    left: -20px;
+}
+
+.address_number::after {
+    right: -20px;
+}
+
+
+
+.header .facebook_path {
+    fill: #B3B3BA;
+}
+
+.header .facebook_link:hover .facebook_path {
+    fill: #24A3FF;
+}
+
+.header_nav {
+    display: flex;
+    max-width: 564px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.header_nav_list {
+    max-width: 425px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.header_nav .list_item {
+    padding-bottom: 2px;
+}
+
+.header_nav .list_item_active {
+    border-bottom: 2px solid #F0145A;
+}
+
+.header_nav_list .list_item_link {
+    font-size: 18px;
+    line-height: 21px;
+    text-align: right;
+    text-decoration: none;
+    font-weight: 500;
+    color: #24A3FF;
+}
+
+.header_nav_list .list_item_link_active {
+    color: #F0145A;
+}
+
+.header_nav_list .list_item_link:hover {
+    color: #F0145A;
+}
+
+.home .wrapper {
+    max-width: 1095px;
+    padding: 30px 0 100px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.home_content {
+    max-width: 641px;
+    width: 100%;
+    min-height: 380px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column
+}
+
+.home_title {
+    @include gradientText;
+}
+
+.home_text {
+    font-size: 21px;
+    line-height: 30px;
+    color: #000000;
+}
+
+
+.home_info {
+    max-width: 412px;
+    width: 100%;
+    min-height: 315px;
+    border-left: 4px solid #E6E6F0;
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info_block {
+    min-height: 73px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info_block:nth-child(2) {
+    min-height: 89px;
+}
+
+.info_block_amount {
+    @include gradientText;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: right;
+    position: relative;
+}
+
+.info_block:first-child .info_block_amount {
+    max-width: 97px;
+}
+
+.info_block:nth-child(2) .info_block_amount {
+    max-width: 107px;
+}
+
+.info_block:last-child .info_block_amount {
+    max-width: 132px;
+}
+
+.info_block_amount::before {
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+}
+
+.info_block:first-child .info_block_amount::before {
+    content: url(images/experience_info.svg);
+}
+
+.info_block:nth-child(2) .info_block_amount::before {
+    content: url(images/clients_info.svg);
+}
+
+.info_block:last-child .info_block_amount::before {
+    content: url(images/pro_bono_info.svg);
+}
+
+.info_block_text {
+    font-size: 18px;
+    line-height: 21px;
+    color: #323264;
+}
+
+.team .wrapper {
+    max-width: 1440px;
+    min-height: 438px;
+    background-color: rgb(219, 219, 219);
+    background-image: url(images/team_bg.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.team_title {
+    margin: auto;
+    font-size: 96px;
+    line-height: 113px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 63px;
+    text-transform: uppercase;
+    max-width: 905px;
+    width: 100%;
+    color: #FFFFFF;
+    opacity: 0.8;
+    text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.8);
+}
+
+.more .wrapper {
+    max-width: 1095px;
+    padding: 80px 0 93px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.more_text-block {
+    max-width: 641px;
+    width: 100%;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.more_text {
+    font-size: 21px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.more_title {
+    @include gradientText;
+    max-width: 414px;
+
+}
+
+.achievement .wrapper {
+    max-width: 1440px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.achievement_title {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323264;
+    margin: 0 auto;
+    max-width: 112px;
+    width: 100%;
+}
+
+.achievement_сontent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.achievement_block {
+    max-width: 300px;
+    width: 100%;
+    min-height: 109px;
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 12px;
+}
+
+.achievement_block_img {
+    margin: auto;
+    height: 60px;
+}
+
+.achievement_block:first-child .achievement_block_img {
+    width: 80px;
+}
+
+.achievement_block:nth-child(2) .achievement_block_img {
+    width: 159px;
+}
+
+.achievement_block:nth-child(3) .achievement_block_img {
+    width: 195px;
+}
+
+.achievement_block:last-child .achievement_block_img {
+    width: 166px;
+}
+
+.achievement_slider {
+    display: flex;
+    max-width: 76px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.slider_dot {
+    background: #24A3FF;
+    opacity: 0.2;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider_dot:hover {
+    opacity: 0.6;
+}
+
+.slider_dot_active {
+    opacity: 1;
+}
+
+.slider_dot_active:hover {
+    opacity: 1;
+}
+
+.slider_dot_mobile {
+    display: none;
+}
+
+.footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 32px 0 40px;
+    border-top: 4px solid #E6E6F0;
+}
+
+.footer_contacts {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: 423px;
+    width: 100%;
+    min-height: 79px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_contacts .address_street {
+    color: #323264;
+    font-weight: 500;
+    max-width: 212px;
+}
+
+.footer_contacts .address_number {
+    color: #46466E;
+}
+
+.footer_contacts .address_number::after,
+.footer_contacts .address_number::before {
+    background: #B3B3BA;
+}
+
+.footer_contacts .address_number::before {
+    left: -15px;
+}
+
+
+.wrapbreak {
+    flex-basis: 100%;
+    height: 0;
+}
+
+.facebook_link {
+    display: block;
+}
+
+.footer_contacts .facebook_link:hover .facebook_path {
+    fill: #F0145A;
+}
+
+.map_link {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #24A3FF;
+    text-decoration: none;
+    position: relative;
+}
+
+.map_link::before {
+    content: "";
+    background: #B3B3BA;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -20px;
+}
+
+.mail_link {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #24A3FF;
+    text-decoration: none;
+    margin-right: 26px;
+}
+
+.map_link:hover,
+.mail_link:hover {
+    color: #F0145A;
+}
+
+.footer_copyright {
+    font-size: 16px;
+    line-height: 19px;
+    color: #B3B3BA;
+}
+
+@media all and (max-width: 480px) {
+    .main-wrapper .wrapper {
+        max-width: 335px;
+    }
+
+    .header .wrapper {
+        padding: 20px 0 0 0;
+        flex-direction: column;
+        min-height: 104px;
+    }
+
+    .header_mobile_actions {
+        max-width: 100%;
+        order: 2;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        align-items: center;
+    }
+
+    .burger_menu {
+        display: block;
+        position: relative;
+        width: 18px;
+        height: 14px;
+        cursor: pointer;
+    }
+
+    .burger_line {
+        height: 2px;
+        width: 100%;
+        background: #323264;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+    }
+
+    .burger_menu::before,
+    .burger_menu::after {
+        content: "";
+        height: 2px;
+        width: 100%;
+        background: #323264;
+        position: absolute;
+        left: 0;
+    }
+
+    .burger_menu::before {
+        top: 0;
+    }
+
+    .burger_menu::after {
+        bottom: 0;
+    }
+
+    .mobile_nav_open .mobile_nav {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: white;
+        z-index: 1;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 16px;
+    }
+
+    .header_logo {
+        max-width: 182px;
+    }
+
+    .header_logo::before,
+    .header_logo::after {
+        background-size: contain;
+    }
+
+    .header_logo::before {
+        width: 11px;
+        height: 24px;
+        left: 44%;
+    }
+
+    .header_logo::after {
+        width: 21px;
+        height: 24px;
+    }
+
+    .logo_link {
+        margin-right: 14px;
+    }
+
+    .logo_img {
+        width: 77px;
+        height: 31px;
+    }
+
+    .crumb_text {
+        font-size: 19px;
+        line-height: 22px;
+    }
+
+    .header_content {
+        order: 1;
+        margin-bottom: 10px;
+    }
+
+    .header_contacts {
+        margin: 0;
+    }
+
+    .header_nav {
+        display: none;
+    }
+
+
+    .header .address_street {
+        display: none;
+    }
+
+    .header .address_facebook {
+        display: none;
+    }
+
+    .header .address_number::after,
+    .header .address_number::before {
+        display: none;
+    }
+
+    .home .wrapper {
+        flex-direction: column;
+        align-items: center;
+        min-height: 856px;
+        padding: 20px 0 34px;
+    }
+
+    .home_content {
+        min-height: 492px;
+    }
+
+    .home_title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .home_text {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .home_info {
+        min-height: 290px;
+        border-left: none;
+        border-top: 4px solid #E6E6F0;
+        padding: 15px 0 0;
+    }
+
+    .team .wrapper {
+        max-width: 100%;
+        min-height: 290px;
+        background-size: 953px;
+        background-position: center center;
+    }
+
+    .team_title {
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 20px;
+        max-width: 318px;
+        width: 100%;
+    }
+
+    .more .wrapper {
+        flex-direction: column;
+        min-height: 650px;
+        padding: 20px 0 40px;
+    }
+
+    .more_text-block {
+        max-width: 100%;
+        min-height: 456px;
+    }
+
+    .more_text {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .more_title {
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .achievement .wrapper {
+        min-height: 208px;
+    }
+
+    .achievement_content {
+        max-width: 100%;
+    }
+
+    .achievement_block {
+        max-width: 157px;
+        min-height: 57px;
+    }
+
+    .achievement_block:first-child .achievement_block_img {
+        width: 42px;
+        height: 31px;
+    }
+
+    .achievement_block:nth-child(2) .achievement_block_img {
+        width: 83px;
+        height: 31px;
+    }
+
+    .achievement_block:nth-child(3) {
+        display: none;
+    }
+
+    .achievement_block:last-child {
+        display: none;
+    }
+
+    .achievement_slider {
+        max-width: 164px;
+        width: 1005;
+    }
+
+    .slider_dot_mobile {
+        display: block;
+    }
+
+    .footer .wrapper {
+        padding: 23px 0 118px 0;
+    }
+
+    .footer .wrapper,
+    .footer_contacts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map_link::before,
+    .address_number::after,
+    .address_number::before {
+        display: none;
+    }
+
+    .footer .address_street {
+        margin-bottom: 10px;
+    }
+
+    .map_link,
+    .footer .address_facebook,
+    .footer .address_number,
+    .address_mail {
+        margin: 0 0 20px 0;
+    }
+
+    .mail_link {
+        margin: 0;
+    }
+}
